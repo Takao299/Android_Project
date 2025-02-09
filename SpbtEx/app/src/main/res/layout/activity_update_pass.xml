@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.member.UpdatePassActivity">
+
+    <TextView
+        android:id="@+id/update_pass_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/title_activity_update_pass"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="409dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/update_pass_title"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp">
+
+        <TextView
+            android:layout_width="12sp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="*"
+            android:textColor="#FF0000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/password0_label"
+            android:layout_width="140sp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="現在のPassword:"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/password0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="@string/prompt0_password"
+            android:gravity="center|left"
+            android:hint="@string/prompt0_password"
+            android:imeActionLabel="@string/action_sign_in_short"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/password_display_check0"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/display_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="409dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/password_display_check0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp">
+
+        <TextView
+            android:layout_width="12sp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="*"
+            android:textColor="#FF0000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/password1_label"
+            android:layout_width="140sp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="新しいPassword:"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/password1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="@string/prompt1_password"
+            android:gravity="center|left"
+            android:hint="@string/prompt1_password"
+            android:imeActionLabel="@string/action_sign_in_short"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="409dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp">
+
+        <TextView
+            android:layout_width="12sp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="*"
+            android:textColor="#FF0000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/password2_label"
+            android:layout_width="140sp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="新しいPassword\n再入力:"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/password2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="@string/prompt1_password_re"
+            android:gravity="center|left"
+            android:hint="@string/prompt1_password_re"
+            android:imeActionLabel="@string/action_sign_in_short"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true" />
+    </LinearLayout>
+
+    <!-- ★ポイント2★ パスワードを平文表示するオプションを用意する -->
+    <CheckBox
+        android:id="@+id/password_display_check1"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/display_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:ignore="MissingConstraints" />
+
+    <!-- ★ポイント3★ パスワード平文表示時の危険性を注意喚起する -->
+    <TextView
+        android:id="@+id/password_display_alert"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/alert_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_display_check1"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/password_memo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/password_memo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_display_alert"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/update_pass_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="30dp"
+        android:text="@string/action_update"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_memo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

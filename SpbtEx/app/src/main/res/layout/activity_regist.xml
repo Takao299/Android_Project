@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.register.RegistActivity">
+
+    <TextView
+        android:id="@+id/regist_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/title_activity_regist"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="409dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/regist_title"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp">
+
+        <TextView
+            android:layout_width="12sp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="*"
+            android:textColor="#FF0000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/email_label"
+            android:layout_width="140sp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="Email:"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/selected_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="Hello World!"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="409dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp">
+
+        <TextView
+            android:layout_width="12sp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="*"
+            android:textColor="#FF0000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/password1_label"
+            android:layout_width="140sp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="Password:"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/password1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="@string/prompt_password"
+            android:gravity="center|left"
+            android:hint="@string/prompt_password"
+            android:imeActionLabel="@string/action_sign_in_short"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/password_memo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/password_memo"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="409dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp">
+
+        <TextView
+            android:layout_width="12sp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="*"
+            android:textColor="#FF0000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/password2_label"
+            android:layout_width="140sp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="Password再入力:"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/password2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="@string/prompt_password"
+            android:gravity="center|left"
+            android:hint="@string/reType_password"
+            android:imeActionLabel="@string/action_sign_in_short"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true" />
+    </LinearLayout>
+
+    <!-- ★ポイント2★ パスワードを平文表示するオプションを用意する -->
+    <CheckBox
+        android:id="@+id/password_display_check"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/display_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:ignore="MissingConstraints" />
+
+    <!-- ★ポイント3★ パスワード平文表示時の危険性を注意喚起する -->
+    <TextView
+        android:id="@+id/password_display_alert"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/alert_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_display_check"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="409dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/password_display_alert"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp">
+
+        <TextView
+            android:layout_width="12sp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="*"
+            android:textColor="#FF0000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/name_label"
+            android:layout_width="140sp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="Name:"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/member_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="@string/prompt_name"
+            android:ems="10"
+            android:gravity="center|left"
+            android:hint="@string/prompt_name"
+            android:inputType="text"
+            android:maxLength="10" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="30dp"
+        android:text="@string/action_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+    <Button
+        android:id="@+id/finish_register_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:onClick="buttonFinish"
+        android:text="会員登録画面を閉じる"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_button"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

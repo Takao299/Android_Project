@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.member.MemberActivity">
+
+    <TextView
+        android:id="@+id/member_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/title_activity_member"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="409dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/member_title"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp">
+
+        <TextView
+            android:layout_width="12sp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text=" "
+            android:textColor="#FF0000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/email_label"
+            android:layout_width="140sp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="Email:"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/member_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="Hello World!"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="409dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp">
+
+        <TextView
+            android:layout_width="12sp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text=" "
+            android:textColor="#FF0000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/name_label"
+            android:layout_width="140sp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="Name:"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/member_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="Hello World!"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/m_email_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="30dp"
+        android:onClick="moveUpdateMail"
+        android:text="@string/action_m_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+    <Button
+        android:id="@+id/m_pass_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="20dp"
+        android:onClick="moveUpdatePass"
+        android:text="@string/action_m_pass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/m_email_button" />
+
+    <Button
+        android:id="@+id/m_etc_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="20dp"
+        android:onClick="moveUpdateEtc"
+        android:text="@string/action_m_etc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/m_pass_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

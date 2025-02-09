@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/view_cardview_margin_topbottom"
+        android:layout_marginLeft="@dimen/view_cardview_margin_leftright"
+        android:layout_marginRight="@dimen/view_cardview_margin_leftright"
+        android:layout_marginTop="@dimen/view_cardview_margin_topbottom"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:id="@+id/cardLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="128dp"
+                    android:layout_height="116dp"
+                    android:layout_marginLeft="@dimen/view_cardview_padding_leftright"
+                    android:layout_marginRight="@dimen/view_cardview_padding_leftright" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView_f_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/view_cardview_textsize_main" />
+
+                    <TextView
+                        android:id="@+id/textView_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack" />
+
+                    <TextView
+                        android:id="@+id/textView_memo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
